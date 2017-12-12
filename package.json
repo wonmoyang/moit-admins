@@ -1,0 +1,41 @@
+{
+  "name": "MoitAdmins",
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "scripts": {
+    "electron-start": "electron .",
+    "electron-build": "build"
+  },
+  "devDependencies": {
+    "electron": "~1.7.8",
+    "electron-builder": "^19.42.1"
+  },
+  "dependencies": {
+  
+  },
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "build": {
+    "appId": "com.moit.admin.app",
+    "asar": true,
+    "files": [
+      "electron/main.js",
+      "server/app.js",
+      "server/node_modules",
+      "client/dist"
+    ],
+    "mac": {
+      "category": "productivity"
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "menuCategory": true
+    }
+  }
+}
